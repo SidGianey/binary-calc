@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Binary_Calc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Binary Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLi-Sx-LCT">
+                                <rect key="frame" x="103.66666666666669" y="144" width="183" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.13532251119613647" green="0.62599629163742065" blue="0.089816771447658539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KiH-Jr-fIF">
+                                <rect key="frame" x="100" y="308" width="190" height="30"/>
+                                <color key="backgroundColor" red="0.13532251119613647" green="0.62599629163742065" blue="0.089816771447658539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Convert to Decimal">
+                                    <color key="titleColor" red="0.061477161943912506" green="0.16127753257751465" blue="0.20505645871162415" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" name="AccentColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="convToDec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zqf-7L-UeO"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Yka-7Z-mmg">
+                                <rect key="frame" x="75" y="555" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a Decimal or Binary Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tSt-C5-HLh">
+                                <rect key="frame" x="40" y="224" width="310" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZ1-mp-JhX">
+                                <rect key="frame" x="100" y="388" width="190" height="30"/>
+                                <color key="backgroundColor" red="0.13532251119613647" green="0.62599629163742065" blue="0.089816771447658539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Convert to Binary">
+                                    <color key="titleColor" red="0.061477161943912506" green="0.16127753257751465" blue="0.20505645871162415" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="convToBin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fT0-dg-HsG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.061477161943912506" green="0.16127753257751465" blue="0.20505645871162415" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YZ1-mp-JhX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="C48-fG-qm0"/>
+                            <constraint firstItem="xLi-Sx-LCT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dad-vK-RXr"/>
+                            <constraint firstItem="tSt-C5-HLh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JOB-dG-k94"/>
+                            <constraint firstItem="YZ1-mp-JhX" firstAttribute="top" secondItem="KiH-Jr-fIF" secondAttribute="bottom" constant="50" id="Mpk-rw-p77"/>
+                            <constraint firstItem="YZ1-mp-JhX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nqn-v8-ivN"/>
+                            <constraint firstItem="tSt-C5-HLh" firstAttribute="top" secondItem="xLi-Sx-LCT" secondAttribute="bottom" constant="50" id="aqk-0j-gc4"/>
+                            <constraint firstItem="tSt-C5-HLh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="kuN-Zv-UgP"/>
+                            <constraint firstItem="KiH-Jr-fIF" firstAttribute="top" secondItem="tSt-C5-HLh" secondAttribute="bottom" constant="50" id="rIb-13-bPa"/>
+                            <constraint firstItem="xLi-Sx-LCT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="s4i-V9-DzP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KiH-Jr-fIF" secondAttribute="trailing" constant="100" id="wSJ-h6-VOf"/>
+                            <constraint firstItem="KiH-Jr-fIF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="xBy-fd-g9K"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="input" destination="tSt-C5-HLh" id="vLm-Q2-h6e"/>
+                        <outlet property="output" destination="Yka-7Z-mmg" id="S2q-9i-49O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.46153846153845" y="93.838862559241704"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
